@@ -17,8 +17,11 @@ You can create Symbolic links manually (if were cloned without symlinks):
 
     
     mklink /D [pathToProgect]\app\node_modules\@components [pathToProgect]\app\components
+    
     mklink /D [pathToProgect]\app\node_modules\@helpers [pathToProgect]\app\helpers
+    
     mklink /D [pathToProgect]\app\node_modules\@store [pathToProgect]\app\store
+    
     mklink /D [pathToProgect]\app\node_modules\@styles [pathToProgect]\app\styles
 
 ## Next
