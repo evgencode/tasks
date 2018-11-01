@@ -1,0 +1,25 @@
+@import '~@styles/variables/index.scss';
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-opaque {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.loader:not(.loader-opaque) {
+  pointer-events: none;
+}
+
+.loader-spin {
+  align-self: center;
+}

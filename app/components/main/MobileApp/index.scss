@@ -1,0 +1,6 @@
+@import '~@styles/variables/index.scss';
+@import '~@styles/extends/index.scss';
+
+.mobile-app {
+  @extend %app-wrap;
+}

@@ -1,0 +1,9 @@
+@import '~@styles/variables/index.scss';
+@import '~@styles/extends/index.scss';
+
+.desktop-app {
+  @extend %app-wrap;
+  @media screen and(min-width: $lg-xl) {
+    width: 1360px;
+  }
+}

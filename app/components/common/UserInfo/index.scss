@@ -1,0 +1,50 @@
+@import '~@styles/variables/index.scss';
+
+.root {
+  flex: 1 1 100%;
+  overflow: hidden;
+  position: relative;
+  @media screen and(min-width: $lg) {
+    flex: 0 0 30%
+  }
+}
+
+.column-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  border-left: 1px solid $header-border-color;
+}
+
+.title {
+  color: $white;
+  font-size: 1.2em
+}
+
+.scrollable {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.block {
+  margin: 12px 3%;
+}
+
+.user-ava {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.user-name {
+  margin-top: 20px;
+  padding: 10px 0;
+  text-align: center;
+  color: inherit;
+}

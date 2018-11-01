@@ -1,0 +1,33 @@
+@import '~@styles/variables/index.scss';
+
+.root {
+  overflow: hidden;
+  background-color: $white;
+  position: relative;
+  flex: 1 1 100%;
+}
+
+.header {
+  @media screen and(min-width: $md) {
+    border-left: 1px solid $header-border-color;
+  }
+}
+
+.title {
+  color: $white;
+  font-size: 1.2em
+}
+
+.column-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.scrollable {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}

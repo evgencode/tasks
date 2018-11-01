@@ -1,0 +1,9 @@
+@import '~@styles/variables/index.scss';
+
+%app-wrap {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+}

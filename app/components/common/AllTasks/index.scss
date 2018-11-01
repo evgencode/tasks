@@ -1,0 +1,31 @@
+@import '~@styles/variables/index.scss';
+
+.root {
+  overflow: hidden;
+  background-color: $white;
+  position: relative;
+  flex: 1 1 100%;
+}
+
+.column-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  color: $white;
+  font-size: 1.2em;
+}
+
+.scrollable {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.tasks-list {
+  padding: 8px 12px
+}

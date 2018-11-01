@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+  <meta name="theme-color" content="#e4e4e4">
+  <meta itemprop="description" content="">
+  <meta name="keywords" content="">
+  <title>Tasks</title>
+</head>
+<body>
+<div id="root"></div>
+<% htmlWebpackPlugin.files.js.forEach(function(js) { %><script type="text/javascript" src="<%=js%>"></script>
+<% }); %>
+<% htmlWebpackPlugin.files.css.forEach(function(style) { %><link href="<%=style%>" rel="stylesheet">
+<% }); %>
+</body>
+</html>

@@ -1,0 +1,21 @@
+@import '~@styles/variables/index.scss';
+
+.root {
+  padding-left: 9%;
+  padding-right: 9%;
+  margin-bottom: 16px;
+  position: relative;
+}
+.root::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.task {
+  padding: 10px;
+  max-width: 95%;
+  @media screen and(min-width: $md){
+    max-width: 65%;
+  }
+}
