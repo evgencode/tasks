@@ -5,12 +5,12 @@ import styles from './index.scss'
 
 const cs = classNames.bind(styles)
 
-const Task = props => {
-  const { out } = props
+const Task = ({ id, title, completed }) => {
   return (
     <div className={cs('root')}>
       <Paper elevation={1} className={cs('task')}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        <p>{title}</p>
+        <p className={cs('status')}>{completed ? 'Completed' : 'In progress'}</p>
       </Paper>
     </div>
   )

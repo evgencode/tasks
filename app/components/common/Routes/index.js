@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import React, { Fragment } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Tasks from '@app/components/common/Tasks'
+import Tasks from '@app/components/common/Tasks/container'
 import AllTasks from '@app/components/common/AllTasks'
 import IntroPage from '@app/components/common/IntroPage'
 import Users from '@app/components/common/Users/container'

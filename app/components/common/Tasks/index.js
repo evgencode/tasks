@@ -10,6 +10,7 @@ const cs = classNames.bind(styles)
 import Task from './Task'
 
 const Tasks = ({
+  todos,
   match: {
     params: { userId }
   }
@@ -19,16 +20,20 @@ const Tasks = ({
       <div className={cs('column-box')}>
         <AppBar position="static" className={cs('header')}>
           <Toolbar>
-            <div className={cs('title')}>Tasks for User #{userId}</div>
+            <div className={cs('title')}>Tasks for User ID {userId}</div>
           </Toolbar>
         </AppBar>
         <div className={cs('scrollable')}>
           <Scrollbars>
             <div className={cs('top-divider')} />
             <div className={cs('tasks-list')}>
-              {Array.from({ length: 14 }).map((n, i) => (
-                <Task key={i} />
-              ))}
+              {!!todos.length && (
+                <div className={cs('tasks-list')}>
+                  {todos.map(todo => (
+                    <Task key={todo.id} {...todo} />
+                  ))}
+                </div>
+              )}
             </div>
           </Scrollbars>
         </div>
