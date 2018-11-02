@@ -1,7 +1,7 @@
-import { connected } from '@helpers/container_helpers'
+import { connected } from '@app/helpers/container_helpers'
 import { push } from 'connected-react-router'
-import actions from '@store/actions'
-import { getUsersList } from '@store/reducers/users/selectors'
+import actions from '@app/store/actions'
+import { getUsersList } from '@app/store/reducers/users/selectors'
 import Users from './index'
 
 const mapDispatchToProps = {

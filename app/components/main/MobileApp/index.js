@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind'
 import React from 'react'
-import { MobileAppRouter } from '@components/common/Routes'
+import { MobileAppRouter } from '@app/components/common/Routes'
 import styles from './index.scss'
 
 const cs = classNames.bind(styles)

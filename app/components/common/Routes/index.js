@@ -1,11 +1,11 @@
 import _ from 'lodash'
 import React, { Fragment } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Tasks from '@components/common/Tasks'
-import AllTasks from '@components/common/AllTasks'
-import IntroPage from '@components/common/IntroPage'
-import Users from '@components/common/Users/container'
-import UserInfo from '@components/common/UserInfo'
+import Tasks from '@app/components/common/Tasks'
+import AllTasks from '@app/components/common/AllTasks'
+import IntroPage from '@app/components/common/IntroPage'
+import Users from '@app/components/common/Users/container'
+import UserInfo from '@app/components/common/UserInfo'
 
 const routes = [
   {

@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import { Scrollbars } from 'react-custom-scrollbars'
-import Loader from '@components/common/Loader'
+import Loader from '@app/components/common/Loader'
 import UsersList from './UsersList'
 import styles from './index.scss'
 
