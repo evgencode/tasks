@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 import users from './users'
-import tasks from './tasks'
+import todos from './todos'
 
 export default combineReducers({
   users,
-  tasks
+  todos
 })

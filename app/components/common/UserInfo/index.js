@@ -10,28 +10,34 @@ import styles from './index.scss'
 
 const cs = classNames.bind(styles)
 
-const UserInfo = ({
-  match: {
-    params: { userId }
-  }
-}) => {
+const UserInfo = ({ user }) => {
   return (
     <section className={cs('root')}>
       <div className={cs('column-box')}>
         <AppBar position="static" className={cs('header')}>
           <Toolbar>
-            <div className={cs('title')}>Информация о пользователе ID {userId}</div>
+            <div className={cs('title')}>Информация о пользователе</div>
           </Toolbar>
         </AppBar>
-
-        <div className={cs('scrollable')}>
-          <Scrollbars>
-            <Paper className={cs('block')}>
-              <Avatar className={cs('user-ava')} alt="user ava" src={Ava0} />
-              <div className={cs('user-name', 'title')}>Пользователь ID 12345</div>
-            </Paper>
-          </Scrollbars>
-        </div>
+        {user && (
+          <div className={cs('scrollable')}>
+            <Scrollbars>
+              <Paper className={cs('block')}>
+                <Avatar className={cs('user-ava')} alt="user ava" src={Ava0} />
+                <div className={cs('user-name', 'title')}>{user.name}</div>
+                <ul>
+                  <li>Email: {user.email}</li>
+                  <li>
+                    Address: {user.address && `${user.address.city}, ${user.address.street} ${user.address.suite}`}
+                  </li>
+                  <li>Company: {user.company && user.company.name}</li>
+                  <li>Phone: {user.phone}</li>
+                  <li>Website: {user.website}</li>
+                </ul>
+              </Paper>
+            </Scrollbars>
+          </div>
+        )}
       </div>
     </section>
   )

@@ -6,7 +6,6 @@ import history from './history'
 import services from '../services'
 
 export default (initialState = {}) => {
-  console.log('services', services)
   const middlewares = createMiddlewares(history, services)
   const enhancers = [applyMiddleware(...middlewares)]
 

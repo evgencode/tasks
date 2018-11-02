@@ -5,26 +5,23 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import { Scrollbars } from 'react-custom-scrollbars'
 import Loader from '@app/components/common/Loader'
-import UsersList from './UsersList'
+import UsersList from './UsersList/container'
 import styles from './index.scss'
 
 const cs = classNames.bind(styles)
 
 class Users extends Component {
+  state = { loading: true }
+
   async componentDidMount() {
+    const { getUsers, getTodos } = this.props
     try {
-      await this.props.getUsers()
+      await getUsers()
+      await getTodos()
     } catch (error) {
       console.warn('<Users /> ERROR: ', error)
     }
-  }
-
-  userClick = id => {
-    this.props.navigateTo(`/users/${id}`)
-  }
-
-  goToUserInfo = id => {
-    this.props.navigateTo(`/users/${id}/info`)
+    this.setState({ loading: false })
   }
 
   render() {
@@ -37,12 +34,12 @@ class Users extends Component {
           </Toolbar>
         </AppBar>
         <div className={cs('scrollable')}>
-          {users.length > 0 ? (
-            <Scrollbars>
-              <UsersList users={users} userClick={this.userClick} goToUserInfo={this.goToUserInfo} />
-            </Scrollbars>
-          ) : (
+          {this.state.loading ? (
             <Loader opaque={true} />
+          ) : (
+            <Scrollbars>
+              <UsersList />
+            </Scrollbars>
           )}
         </div>
       </section>

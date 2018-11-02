@@ -5,7 +5,7 @@ const defaultState = {
 }
 
 const reducerMap = {
-  'TASKS/SET_ALL': (state, { payload }) => {
+  'TODOS/SET_ALL': (state, { payload }) => {
     const byId = _.fromPairs(payload.map(task => [task.id, task]))
     return { ...state, byId }
   }

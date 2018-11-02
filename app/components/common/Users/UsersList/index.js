@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import List from '@material-ui/core/List'
-import UsersItem from './UsersItem'
+import UsersItem from './UsersItem/container'
 
-const GroupsList = ({ users, userClick, goToUserInfo }) => {
+const GroupsList = ({ users }) => {
   return (
     <List disablePadding>
-      {users.map(({ id, name, email }) => (
-        <UsersItem key={id} id={id} name={name} email={email} onClick={userClick} goToUserInfo={goToUserInfo} />
+      {users.map(user => (
+        <UsersItem key={user.id} {...user} />
       ))}
     </List>
   )

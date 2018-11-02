@@ -5,7 +5,7 @@ import Tasks from '@app/components/common/Tasks'
 import AllTasks from '@app/components/common/AllTasks'
 import IntroPage from '@app/components/common/IntroPage'
 import Users from '@app/components/common/Users/container'
-import UserInfo from '@app/components/common/UserInfo'
+import UserInfo from '@app/components/common/UserInfo/container'
 
 const routes = [
   {
