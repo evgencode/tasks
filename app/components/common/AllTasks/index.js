@@ -7,13 +7,6 @@ import styles from './index.scss'
 
 const cs = classNames.bind(styles)
 
-// Mock
-import * as avatars from '../../../../images'
-const languages = {
-  native: 'RU',
-  learns: ['EN', 'FR']
-}
-
 const AllTasks = () => {
   return (
     <section className={cs('root')}>
